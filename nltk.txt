@@ -1,7 +1,7 @@
+omw-1.4
 punkt
 stopwords
 averaged_perceptron_tagger
 wordnet
 pros_cons
 reuters
-omw-1.4
