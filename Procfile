@@ -1,1 +1,1 @@
-web: gunicorn A2SL.wsgi --log-file -
+web: gunicorn A2SL.wsgi --log-file -  --preload
