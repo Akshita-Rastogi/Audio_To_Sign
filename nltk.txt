@@ -1,6 +1,7 @@
 
-punkt
+
 stopwords
+punkt
 averaged_perceptron_tagger
 wordnet
 pros_cons
