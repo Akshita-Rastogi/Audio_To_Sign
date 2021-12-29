@@ -12,11 +12,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
-from django.conf import settings
+
+FILE_CHARSET = 'utf-8'
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-FILE_CHARSET = 'utf-16'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,7 +28,7 @@ SECRET_KEY = '3k7=!d39#4@_&5a6to&4=_=j(c^v0(vv91cj5+9e8+d4&+01jb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['audiotosigntheopt.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,10 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'A2SL'
 ]
-
-DISABLE_COLLECTSTATIC=1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,5 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,"assets"),]
+
+STATICFILES_DIRS = [    
+    os.path.join(BASE_DIR,"assets"),
+]
+
+
 django_heroku.settings(locals())
